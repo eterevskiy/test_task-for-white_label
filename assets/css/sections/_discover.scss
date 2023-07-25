@@ -1,0 +1,93 @@
+.discover {
+    background-color: rgba($color: #ebeda4, $alpha: 0.2);
+    padding: 56px 0 60px 0;
+    @media (max-width:1230px){
+        padding: 30px 0 30px 0;
+    }
+    &__inner {
+    }
+    &__title {
+        color: #3dbe98;
+        font-family: 'Gotham-Book';
+        font-size: 40px;
+        text-transform: uppercase;
+        span {
+            font-family: 'Gotham-Bold';
+        }
+        @media (max-width:1230px){
+            text-align: center;
+        }
+        @media (max-width:620px){
+            font-size: 30px;
+        }
+    }
+    &__content {
+        margin-top: 59px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    &__item {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        background-color: #fff;
+        max-width: 285px;
+        transform: scale(1);
+        transition: all .3s;
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 20px;
+            flex-grow: 1;
+        }
+        &-title {
+            font-family: 'Gotham-Book';
+            text-transform: uppercase;
+            color: #3dbe98 ;
+            font-size: 24px;
+            margin-bottom: 19px;
+        }
+        &-subtitle {
+                color: #333333;
+                font-size: 14px;
+                letter-spacing: -0.14px;
+                font-family: 'Gotham-Light';
+        }
+        &-img {
+            object-fit: cover;
+            height: 170px;
+            width: 285px;
+        }
+        &:hover{
+            transform: scale(0.99);
+        }
+        @media (max-width:1024px){
+            &:hover{
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__button {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 21px;
+        font-family: 'Gotham-Light';
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: #3dbe98;
+        color: #fff;
+        width: 100%;
+        span {
+           
+            font-family: 'Gotham-Book';
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #fff;
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        margin-top: 5px;
+        @media (max-width: 991px) {
+           position: relative;
+           height: 60px;
+        }
+              
+    }
+}

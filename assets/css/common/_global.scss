@@ -1,0 +1,47 @@
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+html,body
+{
+ height: 100%;
+}
+body {
+    font-family: "Gothem-Book", sans-serif;
+    font-weight: 400;
+    &.lock{
+        overflow: hidden;
+    }
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+    margin-top: 100px;
+    @media (max-width: 991px) {
+        margin-top:65px;
+    }
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.container{
+    max-width: 1230px;
+    margin: 0 auto;
+    padding:0 15px;
+    &--big{
+        max-width: 1440px;
+        padding:0;
+    }
+}

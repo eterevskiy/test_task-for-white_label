@@ -1,0 +1,89 @@
+.why_tahiti {
+    margin-top: 80px;
+    text-align: center;
+    &__title {
+        font-family: "Gotham-Light";
+        font-size: 40px;
+        color: #ff5d35;
+        text-transform: uppercase;
+        span {
+            font-family: "Gotham-Bold";
+        }
+    }
+    &__content {
+        display: grid;
+        font-size: 18px;
+        line-height: 30px;
+        padding: 53px 0 67px;
+        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            font-size: 16px;
+            line-height: 25px;
+        }
+        @media (max-width: 680px) {
+            grid-template-columns: repeat(1, 1fr);
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 10px;
+        &-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            transition: all .3s;
+            &.active{
+                display: block;
+                overflow:visible;
+            }
+        }
+        &-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 350px;
+        }
+        &-img {
+            object-fit: cover;
+            width: 146px;
+            height: 88px;
+            margin-bottom: 36px;
+        }
+        &-btn {
+            font-family: "Gotham-Bold";
+            color: #ff5d35;
+            text-decoration: underline;
+            border: none;
+            background: none;
+            @media (min-width: 1024px) {
+                position: relative;
+                text-decoration: none;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    border-radius: 1px;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #ff5d35;
+                    visibility: hidden;
+                    transition: all 0.3s;
+                }
+
+                &:hover::before {
+                    visibility: visible;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
